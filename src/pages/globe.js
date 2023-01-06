@@ -26,7 +26,13 @@ function Globe() {
         <ReactGlobe
           globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
           hexPolygonsData={arcsData}
-          hexPolygonResolution={4}
+          hexPolygonResolution={({ properties: d, id: f }) => {
+            if (d.name == "Cyprus") {
+              return 4;
+            } else {
+              return 3;
+            }
+          }}
           hexPolygonMargin={0.05}
           hexPolygonColor={() =>
             `#${Math.round(Math.random() * Math.pow(2, 18))
