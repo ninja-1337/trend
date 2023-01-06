@@ -27,14 +27,9 @@ function Globe() {
 
   return (
     <ReactGlobe
-      globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+      globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
       showGraticules={true}
-      arcsData={arcsData}
-      arcColor={"color"}
-      arcStroke={1.2}
-      arcDashLength={() => Math.random()}
-      arcDashGap={() => Math.random()}
-      arcDashAnimateTime={() => Math.random() * 4000 + 500}
+      hexPolygonsData={""}
     />
   );
 }
