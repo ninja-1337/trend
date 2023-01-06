@@ -1,15 +1,15 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
-
+import { useLayoutEffect, useState } from "react";
+import countries from "./../../data.json";
 const ReactGlobe = dynamic(import("react-globe.gl"), { ssr: false });
 import Head from "next/head";
-const countries = dynamic(import("./../../data.json"), { ssr: false });
+
 function Globe() {
   const [arcsData, setArcsData] = useState([]);
   //const [generatedData, setGeneratedData] = useState([]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     //setGeneratedData(gData);
     setArcsData(countries.features);
   }, []);
