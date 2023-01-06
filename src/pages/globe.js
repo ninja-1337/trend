@@ -1,6 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import countries from "./../../data.json";
 const ReactGlobe = dynamic(import("react-globe.gl"), { ssr: false });
 import Head from "next/head";
@@ -9,8 +9,9 @@ function Globe() {
   const [arcsData, setArcsData] = useState([]);
   //const [generatedData, setGeneratedData] = useState([]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     //setGeneratedData(gData);
+
     setArcsData(countries.features);
   }, []);
 
@@ -34,8 +35,7 @@ function Globe() {
           }
           hexPolygonLabel={({ properties: d, id: f }) => `
       <b>${d.name} ${f}</b> <br /><b>Salary 1337</b>
-     
-    `}
+     `}
         />
         <div>Hello</div>
       </div>
