@@ -32,9 +32,9 @@ function Globe() {
               .toString(12)
               .padStart(6, "0")}`
           }
-          hexPolygonLabel={({ properties: d }) => `
-      <b>${d.name} (${d.ISO_A2})</b> <br />
-      Population: <i>${d.POP_EST}</i>
+          hexPolygonLabel={({ properties: d, id: f }) => `
+      <b>${d.name} ${f}</b> <br /><b>Salary 1337</b>
+     
     `}
         />
         <div>Hello</div>
