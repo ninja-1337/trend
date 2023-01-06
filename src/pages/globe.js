@@ -25,15 +25,15 @@ function Globe() {
         <ReactGlobe
           globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
           hexPolygonsData={arcsData}
-          hexPolygonResolution={2}
+          hexPolygonResolution={4}
           hexPolygonMargin={0.05}
           hexPolygonColor={() =>
             `#${Math.round(Math.random() * Math.pow(2, 18))
-              .toString(16)
+              .toString(12)
               .padStart(6, "0")}`
           }
           hexPolygonLabel={({ properties: d }) => `
-      <b>${d.ADMIN} (${d.ISO_A2})</b> <br />
+      <b>${d.name} (${d.ISO_A2})</b> <br />
       Population: <i>${d.POP_EST}</i>
     `}
         />
