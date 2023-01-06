@@ -22,7 +22,7 @@ const Home: NextPage = () => {
               className="flexmin-w-full flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
               href="/"
             >
-              <h3 className="text-2xl font-bold">About →</h3>
+              <h2 className="text-2xl font-bold">About →</h2>
               <div className="min-w-full text-lg">
                 PayTrends is a salary tracking and analysis tool that provides
                 users with up-to-date pay data for various job categories in
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
             </Link>
           </div>
           <Link href="/globe">
-            <button className="rounded-full bg-orange-400 py-2 px-4 font-bold text-white hover:bg-orange-500">
+            <button className="rounded-full bg-orange-500 py-2 px-4 font-bold text-white hover:bg-orange-600">
               App
             </button>
           </Link>
