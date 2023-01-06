@@ -43,7 +43,7 @@ function Globe() {
       <b>${d.name} ${f}</b> <br /><b>Salary 1337</b>
      `}
         />
-        <div>Hello</div>
+        <div>SEO Goes Here</div>
       </div>
     </>
   );
